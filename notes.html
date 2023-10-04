@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tercera PRE-ENTREGA JS CODER</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3e7c6dded6.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body>
+    
+    <div class="modo" id="nav">
+
+        <div class="logo" id="logo">
+            <a href="./index.html"><img src="/LOGO/happy-face-sticky-note.png" alt="NOTE-HAPPY"></a>
+            <h1>Note-happy</h1>
+        </div>
+</div>
+
+<div id="app">
+    <button id="create-note-button" class="create-note-button">+</button>
+  
+    <div id="note-list">
+        <!-- Aquí se mostrarán las notas guardadas -->
+    </div>
+</div>
+
+<!-- Ventana emergente para crear notas -->
+<div id="overlay">
+
+    <div id="popup" class="popup-container">
+
+
+   
+        <div class="botones-de-nota">
+        <button id="popup-close-button">X</button>
+        <button id="popup-save-button"><i class="fa-solid fa-floppy-disk"></i></button>
+        <button><i class="fa-solid fa-font"></i></button>
+        <button><i class="fa-solid fa-underline"></i></button>
+        <button><i class="fa-solid fa-brush"></i></button>
+        <button><i class="fa-solid fa-bold"></i></button>
+        <button><i class="fa-solid fa-palette"></i></button>
+        <button><i class="fa-solid fa-file"></i></button>
+        <button><i class="fa-solid fa-image"></i></button>
+        <button><i class="fa-solid fa-map"></i></button>
+        
+    </div>
+
+        <div class="textarea-Nota">
+            <input type="text" id="popup-note-title" placeholder="Título de la nota" autocomplete="off">
+            <textarea id="popup-note-text" placeholder="Escribe tu nota aquí"></textarea>        
+    </div>
+
+    </div>
+
+
+</div>
+
+
+    
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="note.js"></script>
+</html>

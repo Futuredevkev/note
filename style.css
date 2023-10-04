@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: black;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.modo-dia {
+    background-color: #fff;
+    color: #000 !important;
+}
+
+.modo-dia-navbar {
+    background-color: #fff !important;
+    color: #000 !important;
+    box-shadow: -1px 6px 6px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 6px 6px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 6px 6px 0px rgba(0,0,0,0.75);
+}
+
+.texto-colorsito {
+    color: #000 !important;
+}
+
+.blanco-texto {
+    color: #fff;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #1F1F1F;
+    height: 70px;
+
+   
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+}
+
+.logo h1 {
+    font-size: 25px;
+    color: rgba(216, 216, 27, 0.821);
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.principal a {
+    text-decoration: none;
+    color: #396EC1;
+    text-transform: uppercase;
+    font-size: 15px;
+
+}
+
+.claro button {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+
+.claro i {
+    font-size: 25px;
+    color: rgba(216, 216, 27, 0.821);
+    
+} 
+
+
+.main {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem;
+}
+
+.main button {
+    border: none;
+    background-color: #5195FF;
+    padding: 10px;
+    border-radius: 3px;
+    width: 150px;
+    color: #fff;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+ .texto__que-es {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+ .texto__que-es h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+  
+}
+
+ .texto__que-es p {
+    font-size: 15.5px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.img img {
+    width: 400px;
+}
+
+.mainTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.mainTwo h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0;
+    gap: 80px;
+}
+
+.desc {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+}
+
+.desc h2 {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.desc p {
+    font-size: 15px;
+}
+
+.img-recursos{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.img-recursos img {
+    width: 300px;
+}
+
+.ventajas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: #1F1F1F;
+}
+
+.ventaja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 30px;
+    gap: 30px;
+}
+
+.ventaja h2 {
+    font-size: 25px;
+}
+
+.ventaja p {
+    width: 50%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.ventaja img {
+    width: 130px;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright span  {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contactanos i {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.contactanos i:hover {
+    color: rgba(216, 216, 27, 0.821);
+}
+
+
+
+
+.modo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #1F1F1F;
+}
+
+
+
+
+  .app {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+}
+
+.botones-nota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.texto-nota {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#note-list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.note {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
+   width: 260px;
+   height: 100px;
+   padding: 10px;
+   background-color: #1F1F1F;
+   border-radius: 3px;
+   margin: 20px;
+}
+
+.note button {
+    border: none;
+    border-radius: 3px;
+    background: rgba(232, 232, 7, 0.894);
+    padding: 3px;
+    width: 70px;
+    color: #000;
+}
+
+
+
+.create-note-button {
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+    background-color: blue;
+    color: white;
+    padding: 15px 22px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#popup {
+    position: fixed;
+    animation: zoomIn 0.5s ease-in-out;
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 90%;
+    background-color: #1F1F1F;
+    border-radius: 10px;
+    transform-origin: center center;
+}
+
+
+.botones-de-nota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 40px;
+    border-bottom: 1px solid yellow;
+}
+
+.botones-de-nota button {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+
+.textarea-Nota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 47px;
+    padding: 20px 20px;
+}
+
+.textarea-Nota textarea {
+    width: 600px;
+    height: 650px;
+    border-radius: 3px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+    resize: none;
+    padding: 20px 20px;
+}
+
+.textarea-Nota input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+/* Keyframes de entrada */
+
+@keyframes zoomIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframes de salida */
+  
+  @keyframes zoomOut {
+    from {
+      transform: scale(1);
+      opacity: 1;
+   
+    }
+    to {
+      transform: scale(0);
+      opacity: 0;
+   
+    }
+  }
+  
+  /* Estilo de la ventana emergente activa */
+
+  .popup-container.fade-out {
+    animation: zoomOut 0.5s ease-in-out;
+    transform: scale(0);
+    opacity: 0;
+}
