@@ -64,7 +64,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
 }
 
 .principal a {
@@ -94,7 +94,8 @@ body {
     width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 7rem;
+    margin: 150px 0;
+    flex-wrap: wrap;
 }
 
 .main button {
@@ -227,11 +228,12 @@ body {
 
 
 
-footer {
+.footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 100px;
+    gap: 100px;
 }
 
 .copyright {
@@ -303,8 +305,8 @@ footer {
    align-items: center;
    flex-direction: column;
    gap: 20px;
-   width: 260px;
-   height: 100px;
+   width: 300px;
+   height: 150px;
    padding: 10px;
    background-color: #1F1F1F;
    border-radius: 3px;
@@ -315,8 +317,8 @@ footer {
     border: none;
     border-radius: 3px;
     background: rgba(232, 232, 7, 0.894);
-    padding: 3px;
-    width: 70px;
+    padding: 4px;
+    width: 80px;
     color: #000;
 }
 
@@ -413,38 +415,132 @@ footer {
 }
 
 
-/* Keyframes de entrada */
-
 @keyframes zoomIn {
-    from {
-      transform: scale(0);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-  
-  /* Keyframes de salida */
-  
-  @keyframes zoomOut {
-    from {
-      transform: scale(1);
-      opacity: 1;
-   
-    }
-    to {
-      transform: scale(0);
-      opacity: 0;
-   
-    }
-  }
-  
-  /* Estilo de la ventana emergente activa */
-
-  .popup-container.fade-out {
-    animation: zoomOut 0.5s ease-in-out;
-    transform: scale(0);
+  from {
     opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Keyframes de salida */
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* Estilo para la paleta de colores */
+
+.color-picker {
+    position: absolute;
+    top: 50px; 
+    left: 10px; 
+    display: none;
+}
+
+@media(max-width: 634px) {
+
+    
+
+        #popup {
+            width: 100%;
+            height: 100%;
+        }
+
+        .textarea-Nota textarea {
+            text-align: center;
+        }
+}
+
+
+
+@media(max-width: 1016px) {
+    .logo h1 {
+        font-size: 15px;
+    }
+
+    .principal {
+        display: none;
+    }
+
+    .main {
+        gap: 30px;
+        text-align: center;
+    }
+
+    .texto__que-es {
+        width: 100%;
+    }
+
+    .texto__que-es p {
+        font-size: 13px;
+    }
+
+    .img img {
+        width: 250px;
+    }
+
+    .centrar {
+        flex-direction: column;
+    }
+
+    .desc {
+        width: 100%;
+        padding: 10px;
+        order: 1;
+    }
+
+    .desc p {
+        font-size: 13px;
+    }
+
+    .desc h2 {
+        font-size: 20px;
+    }
+
+    .img-recursos img {
+        width: 200px;
+    }
+
+    .ventajas {
+        height: auto;
+        flex-direction: column;
+        gap: 40px;
+        margin: 40px 0;
+    }
+
+    .ventaja {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .ventaja p {
+        width: 100%;
+    }
+
+    .ventaja h2 {
+        font-size: 20px;
+    }
+
+    .ventaja img {
+        width: 90px;
+    }
+
+    .footer {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        gap: 30px;
+        
+    }
+
+   
+
 }

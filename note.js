@@ -8,7 +8,18 @@ const popupNoteTitle = document.getElementById("popup-note-title");
 const popupNoteText = document.getElementById("popup-note-text");
 const popupSaveButton = document.getElementById("popup-save-button");
 const popupCloseButton = document.getElementById("popup-close-button");
+const popupContainer = document.getElementById('popup');
 
+
+// Obtener los elementos de los botones y textarea para propiedades de letras
+
+const boldButton = document.getElementById("bold");
+const underlineButton = document.getElementById("underline");
+const colorButton = document.getElementById('paleta');
+const colorPicker = document.getElementById('color-picker');
+const colorInput = document.getElementById('color-input');
+const noteTextArea = document.getElementById("popup-note-text");
+let isEditing = false;
 
 // Objeto para almacenar las notas
 
@@ -32,7 +43,7 @@ function generateNoteHTML(note, index) {
             <h2>${note.titulo}</h2>
             <div class="botones-nota">
                 <button onclick="deleteNoteFromList(${index})">Eliminar</button>
-                <button onclick="editNoteFromList(${index})">Editar</button>
+                <button onclick="editNoteFromList(${index})">Editar & Ver</button>
             </div>
         </div>
     `;
@@ -43,21 +54,22 @@ function generateNoteHTML(note, index) {
 
 function openNotePopup() {
     overlay.style.display = "block";
-    popupContainer.classList.add("active");
-    popupContainer.classList.remove("fade-out");
+    popupContainer.style.animation = "zoomIn 0.5s ease-in-out";
+    popupContainer.style.opacity = 1;
 }
 
 // Función para cerrar la ventana emergente
 
 function closeNotePopup() {
-    overlay.style.display = "none";
- 
-     popupContainer.classList.add("fade-out");
+    popupContainer.style.animation = "zoomOut 0.5s ease-in-out";
+    popupContainer.style.opacity = 0;
+    
+    popupContainer.addEventListener("animationend", function () {
+        overlay.style.display = "none";
+        popupContainer.style.animation = "";
+    }, { once: true });
+}
 
-     setTimeout(() => {
-         popupContainer.classList.remove("active", "fade-out");
-     }, 300); 
- }
 
 // Tocar afuera y que se cierre automáticamente
 
@@ -67,6 +79,9 @@ overlay.addEventListener("click", (event) => {
     }
 });
 
+
+
+
 // Función para crear una nueva nota
 
 function createNote() {
@@ -75,29 +90,37 @@ function createNote() {
     openNotePopup();
 }
 
-    function editNoteFromList(index) {
-        const note = notes[index];
-        popupNoteTitle.value = note.titulo;
-        popupNoteText.value = note.contenido;
-        openNotePopup();
 
-        // Agregar un evento onclick para guardar la nota editada
+function editNoteFromList(index) {
 
-        popupSaveButton.onclick = function () {
+    const note = notes[index];
+    popupNoteTitle.value = note.titulo;
+    popupNoteText.value = note.contenido;
+    openNotePopup();
+    
+    isEditing = true;
 
-            // Actualiza la nota existente en lugar de agregar una nueva
-            
-            note.titulo = popupNoteTitle.value;
-            note.contenido = popupNoteText.value;
-            localStorage.setItem("notes", JSON.stringify(notes));
-            displayNotes();
-            closeNotePopup();
+    // Agregar un evento onclick para guardar la nota editada
 
-            // Limpia el evento onclick después de guardar
+    popupSaveButton.onclick = function () {
 
-            popupSaveButton.onclick = null;
-        };
-    }
+        // Actualiza la nota existente en lugar de agregar una nueva
+
+        note.titulo = popupNoteTitle.value;
+        note.contenido = popupNoteText.value;
+        localStorage.setItem("notes", JSON.stringify(notes));
+        displayNotes();
+        closeNotePopup();
+
+        // Limpia el evento onclick después de guardar
+
+        popupSaveButton.onclick = null;
+
+        // Restablece isEditing a false después de guardar
+
+        isEditing = false;
+    };
+}
 
 // Función para eliminar una nota desde la lista
 
@@ -107,14 +130,14 @@ function deleteNoteFromList(index) {
     displayNotes();
 }
 
-// Función para guardar una nota desde la ventana emergente
+
+// Función para guardar una nota desde la ventana emergente, o editar
 
 function saveNoteFromPopup() {
     const title = popupNoteTitle.value;
     const content = popupNoteText.value;
 
     if (title.trim() === "" || content.trim() === "") {
-
         Swal.fire({
             iconHtml: '<i class="fa-solid fa-note-sticky"></i>',
             background: 'yellow',
@@ -129,7 +152,15 @@ function saveNoteFromPopup() {
         return;
     }
 
-    notes.push({ titulo: title, contenido: content });
+    if (isEditing) {
+        const editedNote = notes.find(note => note.titulo === title);
+        if (editedNote) {
+            editedNote.contenido = content;
+        }
+    } else {
+        notes.push({ titulo: title, contenido: content });
+    }
+
     localStorage.setItem("notes", JSON.stringify(notes));
     displayNotes();
     closeNotePopup();

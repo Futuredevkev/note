@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tercera PRE-ENTREGA JS CODER</title>
+    <meta name="description" content="lleva tus notas contigo por todo el mundo, vayas donde vayas...">
+    <meta name="keywords" content="Notas, Facilidad, Autonomia, Recordatorios, Anotaciones, Estudio">
+    <meta name="author" content="Kevin Moreira">
+    <meta property="og:title" content="Note-happy">
+    <meta property="og:description" content="Note-happy una app simple de notas.">
+    <title>Note-happy || Notas</title>
+    <link rel="icon" href="./LOGO/happy-face-sticky-note.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3e7c6dded6.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="sweetalert2.min.css">
@@ -37,15 +42,10 @@
         <div class="botones-de-nota">
         <button id="popup-close-button">X</button>
         <button id="popup-save-button"><i class="fa-solid fa-floppy-disk"></i></button>
-        <button><i class="fa-solid fa-font"></i></button>
-        <button><i class="fa-solid fa-underline"></i></button>
-        <button><i class="fa-solid fa-brush"></i></button>
-        <button><i class="fa-solid fa-bold"></i></button>
-        <button><i class="fa-solid fa-palette"></i></button>
-        <button><i class="fa-solid fa-file"></i></button>
-        <button><i class="fa-solid fa-image"></i></button>
-        <button><i class="fa-solid fa-map"></i></button>
-        
+        <button id="underline"><i class="fa-solid fa-underline"></i></button>
+        <button id="pintar"><i class="fa-solid fa-font"></i></button>
+        <button id="bold"><i class="fa-solid fa-bold"></i></button>
+        <button id="paleta"><i class="fa-solid fa-palette"></i></button>
     </div>
 
         <div class="textarea-Nota">
@@ -56,6 +56,11 @@
     </div>
 
 
+</div>
+
+<!-- Elemento para mostrar la paleta de colores -->
+<div id="color-picker" class="color-picker">
+    <input type="color" id="color-input" value="#000000">
 </div>
 
 
