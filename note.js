@@ -13,13 +13,10 @@ const popupContainer = document.getElementById('popup');
 
 // Obtener los elementos de los botones y textarea para propiedades de letras
 
-const boldButton = document.getElementById("bold");
-const underlineButton = document.getElementById("underline");
-const colorButton = document.getElementById('paleta');
-const colorPicker = document.getElementById('color-picker');
-const colorInput = document.getElementById('color-input');
 const noteTextArea = document.getElementById("popup-note-text");
 let isEditing = false;
+
+
 
 // Objeto para almacenar las notas
 
@@ -78,7 +75,6 @@ overlay.addEventListener("click", (event) => {
         closeNotePopup();
     }
 });
-
 
 
 

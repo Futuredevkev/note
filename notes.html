@@ -11,63 +11,65 @@
     <link rel="icon" href="./LOGO/happy-face-sticky-note.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3e7c6dded6.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 
 <body>
-    
     <div class="modo" id="nav">
-
         <div class="logo" id="logo">
-            <a href="./index.html"><img src="/LOGO/happy-face-sticky-note.png" alt="NOTE-HAPPY"></a>
+            <a href="./index.html"><img src="/LOGO/unnamed.webp" alt="NOTE-HAPPY"></a>
             <h1>Note-happy</h1>
         </div>
-</div>
+    </div>
 
-<div id="app">
-    <button id="create-note-button" class="create-note-button">+</button>
+    <div id="app">
+        <button id="create-note-button" class="create-note-button">+</button>
   
-    <div id="note-list">
-        <!-- Aquí se mostrarán las notas guardadas -->
-    </div>
-</div>
-
-<!-- Ventana emergente para crear notas -->
-<div id="overlay">
-
-    <div id="popup" class="popup-container">
-
-
-   
-        <div class="botones-de-nota">
-        <button id="popup-close-button">X</button>
-        <button id="popup-save-button"><i class="fa-solid fa-floppy-disk"></i></button>
-        <button id="underline"><i class="fa-solid fa-underline"></i></button>
-        <button id="pintar"><i class="fa-solid fa-font"></i></button>
-        <button id="bold"><i class="fa-solid fa-bold"></i></button>
-        <button id="paleta"><i class="fa-solid fa-palette"></i></button>
+        <div id="note-list">
+            <!-- Aquí se mostrarán las notas guardadas -->
+        </div>
     </div>
 
-        <div class="textarea-Nota">
-            <input type="text" id="popup-note-title" placeholder="Título de la nota" autocomplete="off">
-            <textarea id="popup-note-text" placeholder="Escribe tu nota aquí"></textarea>        
+    <!-- Ventana emergente para crear notas -->
+    <div id="overlay">
+        <div id="popup" class="popup-container">
+            <div class="botones-de-nota">
+                <button id="popup-close-button">X</button>
+                <button id="popup-save-button"><i class="fa-solid fa-floppy-disk"></i></button>
+                <button id="underline"><i class="fa-solid fa-underline"></i></button>
+                <button id="font-size-button"><i class="fa-solid fa-font"></i></button>
+                <ul id="font-size-options">
+                    <li><a href="#" data-size="6">6px</a></li>
+                    <li><a href="#" data-size="12">12px</a></li>
+                    <li><a href="#" data-size="16">16px</a></li>
+                    <li><a href="#" data-size="20">20px</a></li>
+                    <li><a href="#" data-size="24">24px</a></li>
+                    <li><a href="#" data-size="48">48px</a></li>
+                    <li><a href="#" data-size="60">60px</a></li>
+                  </ul>
+                <button id="bold"><i class="fa-solid fa-bold"></i></button>
+                <button id="paleta"><i class="fa-solid fa-palette"></i></button>
+            </div>
+            
+            
+            <div class="textarea-Nota">
+                <div id="color-picker-container">
+                    <div id="color-picker"></div>
+                </div>  
+                <input type="text" id="popup-note-title" placeholder="Título de la nota" autocomplete="off">
+                <textarea id="popup-note-text" placeholder="Escribe tu nota aquí"></textarea>   
+            </div>
+        </div>
     </div>
-
-    </div>
-
-
-</div>
-
-<!-- Elemento para mostrar la paleta de colores -->
-<div id="color-picker" class="color-picker">
-    <input type="color" id="color-input" value="#000000">
-</div>
-
-
     
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <script src="note.js"></script>
+    <script src="color.js"></script>
+    <script src="font.js"></script>
+    <script src="negrita.js"></script>
+    <script src="subrayado.js"></script>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="note.js"></script>
 </html>
