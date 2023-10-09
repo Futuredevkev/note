@@ -162,7 +162,7 @@ function saveNoteFromPopup() {
     closeNotePopup();
 }
 
-// Agregar controladores de eventos
+//  controladores de eventos
 
 createNoteButton.addEventListener("click", createNote);
 popupSaveButton.addEventListener("click", saveNoteFromPopup);
