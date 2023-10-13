@@ -1,0 +1,22 @@
+[
+    {
+        "image": "./try/pepa conejo.jpg",
+        "nombre": "Pepito Conejo",
+        "comentario": "¡Esta app de notas es un salvavidas para mi organización! La interfaz es súper sencilla de usar y me ayuda a mantener todas mis ideas en un solo lugar. Me encanta la función de etiquetas, ¡hace que encontrar mis notas sea pan comido!"
+    },
+    {
+        "image": "./try/peppa pig.jpg",
+        "nombre": "Pepita pepita",
+        "comentario": "Me ha sorprendido gratamente esta app. La capacidad de sincronizar mis notas en todos mis dispositivos es impresionante. Además, los recordatorios son muy útiles para no olvidar tareas importantes. ¡Recomiendo totalmente esta aplicación!"
+    },
+    {
+        "image": "./try/maluma.jpg",
+        "nombre": "Maluma",
+        "comentario": "La app de notas es bastante buena, pero siento que le falta un poco de flow En general, es fácil de usar, pero podría tener una interfaz más llamativa. Aún así, me ha ayudado a estar más organizado, así que no puedo quejarme demasiado."
+    },
+    {
+        "image": "./try/justin.jpg",
+        "nombre": "Justin Bieber",
+        "comentario": "La app de notas es lo máximo. Me encanta cómo puedo adjuntar imágenes y documentos a mis notas, lo que la hace muy versátil. Además, la capacidad de colaborar en tiempo real con otras personas es genial para proyectos compartidos. ¡No puedo vivir sin ella!"
+    }
+  ]

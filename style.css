@@ -586,3 +586,132 @@ body {
     background-color: #eee;
   }
   
+
+
+  #blog {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .comentarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 40px;
+  }
+
+  .comentario {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .foto-estrella {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-estrella img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .imagen-estrella {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .estrellas {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .estrellas h2 {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .estrellas i {
+    font-size: 15px;
+  }
+
+  .estrellas i:nth-child(2) {
+    color: red;
+  }
+
+  .estrellas i:nth-child(3) {
+    color: orange;
+  }
+
+  .estrellas i:nth-child(4) {
+    color: yellow;
+  }
+
+  .estrellas i:nth-child(5) {
+    color: green;
+  }
+
+  .opinion {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    
+  }
+
+  .opinion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .opinion p {
+    font-size: 20px;
+  }
+
+  .ir-a-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+  }
+
+  .volver a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: yellow;
+  }
+
+  .imagen-ir img {
+    width: 50px;
+  }
+
+  @media (max-width: 630px) {
+        .comentarios {
+            flex-direction: column;
+        }
+
+        .comentario {
+            align-items: center;
+        }
+
+        .opinion {
+            text-align: center;
+        }
+  }
